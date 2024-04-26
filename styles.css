@@ -103,11 +103,39 @@ NAV-MENU
 */
 
 .nav-menu {
+  display: none;
   position: absolute;
-  padding: 1.15rem 0 0 1rem;
+  padding: 1.15rem 1rem 0 1rem;
   background: rgba(255, 255, 255, 1);
   height: 100vh;
   width: 75%;
+}
+
+.nav-menu-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu-exit {
+  padding: .25rem;
+  cursor: pointer;
+}
+
+.exit-bars {
+	height: 3px;
+	width: 23px;
+  background:  rgba(39, 77, 247, 1);
+	border-radius: 3px;
+}
+
+.one {
+  transform: rotate(45deg) translateY(1px);
+}
+
+.two {
+  transform: rotate(135deg) translateY(3px) translateX(-1px);
+  
 }
 
 /* 
