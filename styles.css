@@ -15,7 +15,7 @@
 /* global styles */
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 body {
@@ -29,11 +29,10 @@ img {
 }
 
 li {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 /* class styles */
-
 
 /* 
 ========
@@ -42,8 +41,6 @@ NAVBAR
 */
 
 /* Photo by Tima Miroshnichenko: https://www.pexels.com/photo/a-high-angle-shot-of-a-man-looking-at-the-microscope-9574487/ */
-
-
 
 .navbar-fixed {
 	position: fixed;
@@ -65,7 +62,7 @@ NAVBAR
 	color: rgb(158, 42, 0);
 	font-size: 1.5rem;
 	font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 }
 
 .logo span {
@@ -78,23 +75,22 @@ NAVBAR
 	justify-content: center;
 	align-items: flex-end;
 	padding: 0.25rem;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .bar,
 .bar-mid {
 	height: 3px;
 	width: 20px;
-  background:  rgba(39, 77, 247, 1);
+	background: rgba(39, 77, 247, 1);
 	margin: 0.1rem 0;
 	border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+	box-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
 }
 
 .bar-mid {
 	width: 26px;
 }
-
 
 /* 
 ========
@@ -103,40 +99,68 @@ NAV-MENU
 */
 
 .nav-menu {
-  display: none;
-  position: absolute;
-  padding: 1.15rem 1rem 0 1rem;
-  background: rgba(255, 255, 255, 1);
-  height: 100vh;
-  width: 75%;
+	position: absolute;
+	padding: 1.15rem 1rem 0 1rem;
+	background: rgba(255, 255, 255, 1);
+	height: 100vh;
+	width: 22rem;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.show-nav-menu {
+  transform: translateX(0%);
 }
 
 .nav-menu-logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .nav-menu-exit {
-  padding: .25rem;
-  cursor: pointer;
+	padding: 0.75rem 0.25rem;
+	cursor: pointer;
 }
 
-.exit-bars {
-	height: 3px;
-	width: 23px;
-  background:  rgba(39, 77, 247, 1);
+.exit-bar {
+	width: 26px;
 	border-radius: 3px;
 }
 
-.one {
-  transform: rotate(45deg) translateY(1px);
+.exit-bar::before, .exit-bar::after {
+	position: absolute;
+	content: '';
+	height: 3px;
+	width: 26px;
+	background: rgba(39, 77, 247, 1);
+	border-radius: 3px;
 }
 
-.two {
-  transform: rotate(135deg) translateY(3px) translateX(-1px);
-  
+.exit-bar::after {
+	transform: rotate(-45deg);
 }
+
+.exit-bar::before {
+	transform: rotate(45deg);
+}
+
+/* .nav-links {
+  border: 1px solid red;
+} */
+
+.links {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: rgba(39, 77, 247, 1);
+}
+
 
 /* 
 ========
@@ -144,41 +168,39 @@ HERO
 ========
 */
 
-
 .hero {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 		url(./images/pexels-tima-miroshnichenko-9574487.jpg) center / cover
 			no-repeat;
 	height: 100vh;
-  display: grid;
-  place-items: center;
+	display: grid;
+	place-items: center;
 }
 
 .hero-banner {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 1);
-  margin: 0 2rem;
-  text-align: center;
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 1);
+	margin: 0 2rem;
+	text-align: center;
 }
 
 .hero-cta {
-  margin: 2rem auto 0 auto;
-  padding: 1rem 1.5rem;
-  border-radius: 24px;
-  width: 8rem;
-  text-align: center;
-  background: rgba(39, 77, 247, 1);
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+	margin: 2rem auto 0 auto;
+	padding: 1rem 1.5rem;
+	border-radius: 24px;
+	width: 8rem;
+	text-align: center;
+	background: rgba(39, 77, 247, 1);
+	color: rgba(255, 255, 255, 1);
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
 
 .hero-cta:hover {
-  background: rgba(255, 255, 255, 1);
-  color: rgba(39, 77, 247, 1);
+	background: rgba(255, 255, 255, 1);
+	color: rgba(39, 77, 247, 1);
 }
-
